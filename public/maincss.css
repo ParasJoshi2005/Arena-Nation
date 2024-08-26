@@ -1,0 +1,233 @@
+*{
+    margin : 0;
+    padding : 0;
+    font-family: "Poppins", sans-serif;
+    background-color: rgb(45, 40, 40);
+}
+
+.row__poster{
+    width: 100%;
+    object-fit: contain;
+    max-height: 150px;
+    margin-right: 10px ;
+    transition: transform 450ms;
+}
+
+.row__posters{
+    display: flex;
+    flex-direction: row;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 20px;
+}
+
+.row__poster:hover{
+    transform: scale(1.08);
+}
+.row__posters::-webkit-scrollbar{
+    display: none;
+}
+
+.row__posterLarge{
+    max-height: 250px;
+}
+.row__posterLarge:hover{
+    transform: scale(1.09);
+}
+
+.row{
+    color: white;
+    margin-left: 20px;
+
+}
+
+.signin{
+    display: flex;
+    justify-content: end;
+}
+.signin button{
+    border: 1px solid white;
+    padding : 2px 4px;
+    margin: 0 2px;
+    color:white;
+}
+button:hover{
+    background-color: #90a902;
+}
+.h1
+{
+    text-align: center;
+    color: aliceblue;
+        font-size: 42px;
+        background: -webkit-linear-gradient(#ffff09, #c60303);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 0px;
+}
+.desc{
+    text-align: center;
+    color: aliceblue;
+    font-weight: 100;
+}
+.btn_one i{
+    color: white;
+    font-size : 30px;
+    font-weight : 700;
+    position : absolute;
+    left : 16px;
+    line-height : 60px;
+
+    /* z-index : 1; */
+
+    transition : all 0.2s linear;
+
+}
+
+.sidebar_menu {
+    position : fixed;
+    /* left : -300px;     important */
+    left : -400px;
+    /* right : 300px;     important */
+    /* right : -300px;     important */
+
+    height : 100vh;
+    /* width : 30vw; */
+    width : 25vw;
+
+    /* background-color : rgba(255,255,255,0.2); */
+    background-color : rgba(255,255,255,0.1);
+
+    box-shadow : 2px 2px 4px rgba(255,255,255,0.2);
+    box-shadow : 0px 0px 6px rgba(255,255,255,0.5);
+    /* box-shadow : 0px 0px 6px rgba(255,255,255,1);*/
+
+    transition : all 0.4s linear;
+}
+
+.sidebar_menu .logo{
+    position : absolute;
+    width : 100%;
+    height : 60px;
+    line-height : 35px;
+    /* font-size : 60px; */
+    box-shadow : 0px 2px 4px rgba(255,255,255,0.5);
+ 
+}
+
+.sidebar_menu .logo a{
+    position : absolute;
+    left : 70px;
+    /* left : 25px; */
+    padding-top: 10px;
+    text-align : center;
+    font-size : 20px;
+    font-size : 30px;
+    text-decoration : none;
+    color : white;
+    font-weight : 500;
+    /* letter-spacing: 1px; */
+    /* word-spacing: 5px; */
+}
+
+.sidebar_menu .btn_two i{
+    color : grey;
+    font-size : 25px;
+    font-weight : 700;
+    line-height : 60px;
+    position : absolute ;
+    left : 23vw;
+    opacity : 0;
+
+    /* cursor : progress; */
+    cursor : pointer;
+    transition : all 0.2s linear;
+}
+
+.sidebar_menu .menu {
+    /* color : white; */
+    position : absolute;
+    width : 100%;
+    top : 80px;
+}
+
+.sidebar_menu .menu li {
+    margin-top : 6px;
+    padding : 3px 20px;
+}
+
+.sidebar_menu .menu li i,a {
+    color : white;
+    font-size : 15px;
+}
+
+.sidebar_menu .menu li a {
+    /* color : white; */
+    text-decoration : none;
+    padding-left : 8px;
+    letter-spacing : 1px;
+}
+
+.sidebar_menu .social_media {
+    color : white ;
+    opacity : 0.5;
+    position : absolute;
+    left : 22.5%;
+    bottom : 50px;
+}
+
+.sidebar_menu .social_media i {
+    color : white ;
+    opacity : 0.5;
+    padding : 0 5px;
+}
+
+#check {
+    display : none;
+}
+
+.sidebar_menu .menu li:hover {
+    box-shadow : 0 0 4px rgba(255, 255, 255, 0.500);
+    font-size : 20.01px;
+}
+/* .sidebar_menu .menu li:hover {
+    box-shadow : 0 0 4px rgba(255, 255, 255, 0.500);
+    font-size : 30px;
+} */
+
+/* .btn_one:hover {
+    font-size : 40px;
+}
+
+.btn_two:hover {
+    font-size : 30px;
+} */
+
+.btn_one i:hover {
+    font-size : 35px;
+}
+
+.btn_two i:hover {
+    font-size : 35px;
+}
+
+.sidebar_menu .social_media i:hover {
+    opacity : 1;
+    /* font-size : 30px; */
+    transform : scale(1.5);
+    transform : scale(1.2);
+}
+
+#check:checked ~ .sidebar_menu {
+    /* left : 400px; */
+    /* wrong */
+    left : 0;
+}
+
+#check:checked ~ .btn_one i{
+    /* display : none; */
+    opacity : 0;
+}
+
+#check:checked ~ .sidebar_menu > .btn_two i{
+    opacity : 1;
+}
